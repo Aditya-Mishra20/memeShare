@@ -1,11 +1,25 @@
-function App() {
-  
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Layout from "./components/Layout";
 
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route path="search" element />
+    </Route>
+  )
+);
+
+function App() {
   return (
     <>
-      <h1 className="text-blue-500">hello</h1>
+      <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
