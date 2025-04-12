@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3M623Q70CnYTMav8GuVE4CZ73YycO0sQ",
-  authDomain: "memeshare-6347a.firebaseapp.com",
-  projectId: "memeshare-6347a",
-  storageBucket: "memeshare-6347a.firebasestorage.app",
-  messagingSenderId: "345298349409",
-  appId: "1:345298349409:web:d155e29134ff47c001e920"
+  apiKey: import.meta.env.APIKEY,
+  authDomain: import.meta.env.AUTHDOMAIN,
+  projectId: import.meta.env.PROJECTID,
+  storageBucket: import.meta.env.STORAGEBUCKET,
+  messagingSenderId: import.meta.env.MESSAGINGSENDERID,
+  appId: import.meta.env.APPID
 };
 
 // Initialize Firebase
